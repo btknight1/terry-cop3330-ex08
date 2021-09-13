@@ -25,7 +25,9 @@ public class App
 
         System.out.printf("Each person gets %d pieces of pizza.%n", serving);
 
-        if((((slices*pizzas)/numPeople) % 2) == 0)
-            System.out.printf("There are 0 leftover pieces.");
+        if((((slices*pizzas)/(float)numPeople) % 2) == 0)
+            System.out.print("There are 0 leftover pieces.");
+        else
+            System.out.printf("There are %d left over pieces.", (slices*pizzas)-(serving*numPeople));
     }
 }
